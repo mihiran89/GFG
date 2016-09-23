@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- JQUERY -->
+        <script src="dist/js/jquery-3.1.0.min.js"></script>
+        <!-- BOOTSTRAP -->
+        <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="dist/css/bootstrap-theme.min.css">
+        <script src="dist/js/bootstrap.min.js"></script>
+        <!-- SLIDER -->
+        <script src="dist/js/jassor.js"></script>
+        <link rel="stylesheet" href="dist/css/jassor.css">
+        <script src="dist/js/jssor.slider-21.1.5.mini.js" type="text/javascript"></script>
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="dist/css/main.css">
+        <!-- FONT AWSOME -->
+        <link rel="stylesheet" href="dist/font-awesome-4.6.3/css/font-awesome.min.css">
+
+        <script>
+            $(document).ready(function () {
+                $(document).on('click', '.mob-nav', function () {
+                    $('.mob-menu').slideToggle();
+                });
+
+                $('#myModal2').on('hide.bs.modal', function (e) {
+                    var vid = document.getElementById("myVideo");
+                    vid.pause();
+                });
+
+                $('#myModal2').on('show.bs.modal', function (e) {
+                    var vid = document.getElementById("myVideo");
+                    vid.play();
+                });
+            });
+        </script>
+
+        <title>Global Freight Group</title>
+    </head>
+
+    <body>
+        <div id="header-main">
+            <div class="col-md-3 col-sm-3 col-xs-3" id="logo-div">
+                <img id="logo-img" src="dist/images/logo.png" width="100%" />
+            </div>
+            <div class="col-md-9 col-sm-9 col-xs-9">
+                <div class="col-md-12 header-inner-top hidden-xs hidden-sm">
+                    <div class="col-md-7 header-inner-top-left"><a href="#">Future events</a> | <a href="#">Past events</a></div>
+                    <div class="col-md-2 header-inner-top-middle text-center">
+                        <div class="social-icon"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                        <div class="social-icon"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                        <div class="social-icon"><i class="fa fa-youtube" aria-hidden="true"></i></div>
+                    </div>
+                    <div class="col-md-3 header-inner-top-right">
+                        <div data-toggle="modal" data-target="#myModal" class="social-icon mlogin"><i class="fa fa-lock" aria-hidden="true"></i> MEMBER LOGIN</div>
+                    </div>
+
+                    <!-- POPUP -->
+                    <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <h3>SIGNUP FOR THE NEWSLETTER</h3>
+                                    <br/>
+                                    <p>Stay in the loop with our awesome newsletter. We'll send you monthly<br/>
+                                        updates of our latest and greatest tools and resources. </p><br/>
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" placeholder="EMAIL ADDRESS"/>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="button" class="btn form-control" value="SIGN UP"/>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-md-12 header-inner-bottom hidden-xs hidden-sm menu">
+                    <ul class="nav nav-pills pull-right"> 
+                        <li role="home"><a href="#">HOME</a></li>
+                        <li role="introduction"><a href="#">GFG INTRODUCTION</a></li>
+                        <li role="opportunities"><a href="#">MEMBERSHIP OPPORTUNITIES</a></li>
+                        <li role="news"><a href="#">GFG NEWS</a></li>
+                        <li role="directory"><a href="#">PARTNERSHIP DIRECTORY</a></li>
+                        <li role="service"><a href="#">SERVICE & INQUIRY</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12 visible-xs visible-sm mob-nav">
+                <i class="fa fa-bars pull-right" aria-hidden="true"></i>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12 header-inner-bottom mob-menu text-center">
+                <ul class="nav nav-pills"> 
+                    <li role="home"><a href="#">HOME</a></li>
+                    <li role="introduction"><a href="#">GFG INTRODUCTION</a></li>
+                    <li role="opportunities"><a href="#">MEMBERSHIP OPPORTUNITIES</a></li>
+                    <li role="news"><a href="#">GFG NEWS</a></li>
+                    <li role="directory"><a href="#">PARTNERSHIP DIRECTORY</a></li>
+                    <li role="service"><a href="#">SERVICE & INQUIRY</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <!-- SLIDER -->
+        <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height:270px; overflow: hidden; visibility: hidden;">
+            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
+                <div data-p="225.00" style="display: none;">
+                    <img data-u="image" src="dist/images/banner1.jpg" />
+                </div>
+                <div data-p="225.00" style="display: none;">
+                    <img data-u="image" src="dist/images/banner2.jpg" />
+                </div>
+                <div data-p="225.00" data-po="80% 55%" style="display: none;">
+                    <img data-u="image" src="dist/images/banner3.jpg" />
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-11 ad">
+            APPLY FOR MEMBERSHIP OF OUR EXCLUSIVE GLOBAL NETWORK - MEET OUR MEMBERS AT OUR NEXT CONFERENCE IN PANAMA IN 2016
+        </div>
+        <div class="col-md-1 joinus">
+            JOIN US
+        </div>
+        <div class="clearfix"></div>
+
+        <!-- INTRODUCTION -->
+        <div class="col-md-12 introduction">
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <h1 class="introduction-head">INTRODUCTION</h1>
+                    <br/>
+                    <p>The Global Freight Group Celebrated 20 years of success in 2014. As one of<br/>
+                        the original freight networks, offering its members exclusivity, find out why the<br/>
+                        GFG is different: <a href="">Continue reading...</a></p>
+                    <br/>
+                    <img class="img-testimonials hidden-xs" src="dist/images/testimonials.png" /> <span class="hidden-xs">|</span>
+                    <img class="hidden-xs" src="dist/images/presentation.png" />
+                </div>
+            </div>
+            <div class="col-md-6 intro-div" data-toggle="modal" data-target="#myModal2">
+                <img class="img-intro pull-right" src="dist/images/intro.png" />
+            </div>
+
+            <!-- POPUP -->
+            <div id="myModal2" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <video id="myVideo" width="100%" height="100%" controls>
+                                <source src="dist/video/gfg.mp4" type="video/mp4">
+                                <source src="dist/video/gfg.mp4" type="video/ogg">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <!-- NEW MEMBER -->
+        <div class="col-md-12 member">
+            <div class="col-md-4">
+                <div class="col-md-12 member-left">
+                    <h1 class="new-membership">NEW MEMBERS REQUIRED</h1>
+                    Link up now to get <a href="#">FREE MEMBERSHIP FOR ONE YEAR</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="col-md-12 member-middle">
+                    <div class="col-md-3">
+                        <i class="fa fa-certificate" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-md-9 member-middle-text">
+                        Invest in year 1 fees, <br/><span class="red-font">PAY NO</span> year 2 fees!
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1 plus-div">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-12 member-middle">
+                    <div class="col-md-3">
+                        <i class="fa fa-certificate" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-md-9 member-middle-text">
+                        <span class="red-font">FREE</span> attendance for 1 person at <br/>your first conference.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 member-bottom">
+                There are many reasons to <a href="">Join us</a> with the Global Freight Group:
+            </div>
+            <div class="col-md-4 reasons">
+                <i class="fa fa-stop red-font" aria-hidden="true"></i> <label>Low Membership Fees</label><br/>
+                <i class="fa fa-stop red-font" aria-hidden="true"></i> <label>Exclusive Territory Rights</label><br/>
+                <i class="fa fa-stop red-font" aria-hidden="true"></i> <label>Existing Trading Relationships Allowed</label><br/>
+            </div>
+            <div class="col-md-3 reasons">
+                <i class="fa fa-stop red-font" aria-hidden="true"></i> <label>Mandatory Conference</label><br/>
+                <i class="fa fa-stop red-font" aria-hidden="true"></i> <label>Friendship</label><br/>
+            </div>
+            <div class="col-md-3 reasons">
+                <i class="fa fa-stop red-font" aria-hidden="true"></i> <label>Membership Requirements</label><br/>
+                <i class="fa fa-stop red-font" aria-hidden="true"></i> <label>Our Member Testimonials</label><br/>
+            </div>
+            <div class="col-md-2 reasons">
+                <div class="findmore pull-right">
+                    <img src="dist/images/find.png" /><br/>
+                    <a href="">FIND OUT MORE</a>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <!-- DIRECTORY -->
+        <div class="col-md-12 directory hidden-sm hidden-xs">
+            <div class="directory-member">
+                <h1 class="member-directory">MEMBER DIRECTORY</h1><br/>
+                <p>Have cargo to move? Our members <br/>can do it for you.</p><br/>
+                <p>Contact them directly via our Partner <br/>Directory or use our</p><br/>
+                <div class="file">
+                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                </div>
+                <div class="file-text">
+                    SERVICE & INQUIRY FORM
+                </div>
+                <p class="directory-p">GFG Partners are located<br/>in over 50 countries round<br/>the world. Please click on continent<br/>of interest.</p>
+            </div>
+            <img class="pull-right" src="dist/images/map.png" />
+        </div>
+        <div class="clearfix"></div>
+
+        <!-- FOOTER -->
+        <div class="col-md-12 footer">
+            <div class="col-md-4">
+                <div class="col-md-12">
+                    <h5>21 YEARS OLD AND STILL LEARNING</h5>
+                    <hr />
+                    <p>Even after 21 years, and the fact that most of its founding members continue their membership, the GFG is not complacent.</p>
+                    <br/>
+                    <p>The GFG is one of the world's original, exclusive networks. The fact that one or two other groups now offer exclusivity proves we are doing it right and, since "imitation is the sincerest form of flattery", we thank them for their compliment.</p>
+                    <br/>
+                    <a href="#">READ MORE</a>
+                    <br/><br/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-12">
+                    <h5>GFG NEWS</h5>
+                    <hr />
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <br/>
+                    <a href="#">READ MORE</a>
+                    <br/>
+                    <div class="horizontal_dotted_line"></div>
+                    <br/>
+                    <p>Aliquam faucibus lectus ut orci vehicula tempor.</p>
+                    <br/>
+                    <a href="#">READ MORE</a>
+                    <br/>
+                    <div class="horizontal_dotted_line"></div>
+                    <br/>
+                    <p>Donec sit amet libero tristique</p>
+                    <a href="#">READ MORE</a>
+                    <br/><br/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-12">
+                    <h5>NEWSLETTER SIGNUP</h5>
+                    <hr />
+                    <input type="text" name="name" class="form-control" placeholder="Your Name"/>
+                    <br/>
+                    <input type="text" name="email" class="form-control" placeholder="Your Email"/>
+                    <br/>
+                    <input type="button" class="btn" value="Sign Up"/>
+                    <br/><br/>
+                    <div class="horizontal_dotted_line"></div>
+                    <br/>
+                    <p>Telephone : +44 1902 685158</p>
+                    <p>Fax : +44 1902 685164</p>
+                    <br/>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 footer-bottom">© 2016 - Global Freight Group.</div>
+        <div class="clearfix"></div>
+    </body>
+
+</html>

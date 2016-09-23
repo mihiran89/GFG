@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- JQUERY -->
+        <script src="dist/js/jquery-3.1.0.min.js"></script>
+        <!-- BOOTSTRAP -->
+        <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="dist/css/bootstrap-theme.min.css">
+        <script src="dist/js/bootstrap.min.js"></script>
+        <!-- SLIDER -->
+        <script src="dist/js/jassor.js"></script>
+        <link rel="stylesheet" href="dist/css/jassor.css">
+        <script src="dist/js/jssor.slider-21.1.5.mini.js" type="text/javascript"></script>
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="dist/css/main.css">
+        <!-- FONT AWSOME -->
+        <link rel="stylesheet" href="dist/font-awesome-4.6.3/css/font-awesome.min.css">
+
+        <script>
+            $(document).ready(function() {
+                $(document).on('click', '.mob-nav', function() {
+                    $('.mob-menu').slideToggle();
+                });
+
+                $('#myModal2').on('hide.bs.modal', function(e) {
+                    var vid = document.getElementById("myVideo");
+                    vid.pause();
+                });
+
+                $('#myModal2').on('show.bs.modal', function(e) {
+                    var vid = document.getElementById("myVideo");
+                    vid.play();
+                });
+
+                $(document).on('click', '.sidebar-about li', function() {
+                    $('.sidebar-about li').removeClass('active');
+                    $(this).addClass('active');
+                });
+
+                $(document).on('click', '.sidebar-about-text a', function() {
+                    $('.hide-p').slideToggle();
+                });
+
+                $(document).on('click', '.video-about img', function() {
+                    $(this).hide();
+                    var vid = document.getElementById("myVideo");
+                    vid.play();
+                });
+
+                $(document).on('click', '.sideli', function() {
+                    $('.hide-div').hide();
+                    $('.' + this.id).fadeIn();
+                });
+                
+                $(document).on('click','.test-hide',function (){
+                    $('.test-hide').hide();
+                    var id = this.id;
+                    if(id=='test-hide1'){
+                        $('#test-hide2').fadeIn();
+                    }
+                    if(id=='test-hide2'){
+                        $('#test-hide3').fadeIn();
+                    }
+                    if(id=='test-hide3'){
+                        $('#test-hide4').fadeIn();
+                    }
+                    if(id=='test-hide4'){
+                        $('#test-hide1').fadeIn();
+                    }
+                });
+            });
+        </script>
+
+        <title>About - Global Freight Group</title>
+    </head>
+
+    <body>
+        <div id="header-main">
+            <div class="col-md-3 col-sm-3 col-xs-3" id="logo-div">
+                <img id="logo-img" src="dist/images/logo.png" width="100%" />
+            </div>
+            <div class="col-md-9 col-sm-9 col-xs-9">
+                <div class="col-md-12 header-inner-top hidden-xs hidden-sm">
+                    <div class="col-md-7 header-inner-top-left"><a href="#">Future events</a> | <a href="#">Past events</a></div>
+                    <div class="col-md-2 header-inner-top-middle text-center">
+                        <div class="social-icon"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                        <div class="social-icon"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                        <div class="social-icon"><i class="fa fa-youtube" aria-hidden="true"></i></div>
+                    </div>
+                    <div class="col-md-3 header-inner-top-right">
+                        <div data-toggle="modal" data-target="#myModal" class="social-icon mlogin"><i class="fa fa-lock" aria-hidden="true"></i> MEMBER LOGIN</div>
+                    </div>
+
+                    <!-- POPUP -->
+                    <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <h3>SIGNUP FOR THE NEWSLETTER</h3>
+                                    <br/>
+                                    <p>Stay in the loop with our awesome newsletter. We'll send you monthly<br/>
+                                        updates of our latest and greatest tools and resources. </p><br/>
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" placeholder="EMAIL ADDRESS"/>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="button" class="btn form-control" value="SIGN UP"/>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-md-12 header-inner-bottom hidden-xs hidden-sm menu">
+                    <ul class="nav nav-pills pull-right"> 
+                        <li role="home"><a href="#">HOME</a></li>
+                        <li role="introduction"><a href="#">GFG INTRODUCTION</a></li>
+                        <li role="opportunities"><a href="#">MEMBERSHIP OPPORTUNITIES</a></li>
+                        <li role="news"><a href="#">GFG NEWS</a></li>
+                        <li role="directory"><a href="#">PARTNERSHIP DIRECTORY</a></li>
+                        <li role="service"><a href="#">SERVICE & INQUIRY</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12 visible-xs visible-sm mob-nav">
+                <i class="fa fa-bars pull-right" aria-hidden="true"></i>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12 header-inner-bottom mob-menu text-center">
+                <ul class="nav nav-pills"> 
+                    <li role="home"><a href="#">HOME</a></li>
+                    <li role="introduction"><a href="#">GFG INTRODUCTION</a></li>
+                    <li role="opportunities"><a href="#">MEMBERSHIP OPPORTUNITIES</a></li>
+                    <li role="news"><a href="#">GFG NEWS</a></li>
+                    <li role="directory"><a href="#">PARTNERSHIP DIRECTORY</a></li>
+                    <li role="service"><a href="#">SERVICE & INQUIRY</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <!-- SLIDER -->
+        <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 270px; overflow: hidden; visibility: hidden;">
+            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
+                <div data-p="225.00" style="display: none;">
+                    <img data-u="image" src="dist/images/about.jpg" />
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <!-- CONTENT -->
+        <div class="container">
+            <div class="col-md-3">
+                <div class="col-md-12 sidebar-about">
+                    <ul class="list-group">
+                        <li class="list-group-item active sideli" id="sideli1">Overview<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
+                        <li class="list-group-item sideli" id="sideli2">GFG Media<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
+                        <li class="list-group-item">Directors / Officers / Committees<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9 sideli1 hide-div">
+                <div class="col-md-10 sidebar-about-text">
+                    <p>The Global Freight Group prides itself on its strong inter-member relationships. When seeking our members’ opinions, there was a recurring theme – friendliness. Not to be undervalued, this friendliness ensures that your freight is handled by individuals who you know personally. Other networks may ‘speak volumes’ but that may be volumes of members, at the expenses of personal service. What benefit is volume without good service?<br/><br/>
+                        By contrast, the GFG members treat your freight as their own. You can be sure that your cargo is handled by a person who cares, however far away from origin or destination.</p>
+                    <br/>
+                    <a>READ MORE</a><br/><br/>
+                    <p class="hide-p" hidden>
+                        The GFG delivers exclusivity to its members, without demanding it. The GFG is realistic – a strong company will already have good contacts which it shouldn’t have to abandon. We welcome these contacts as strengths not threats.
+                        <br/><br/>Being exclusive means only choosing the right members, which means you can rely on them to handle your freight with confidence. Such is the GFG – a network upon which you can rely, made up of like-minded independently owned companies.
+                        <br/><br/>We may not boast the largest membership, but we can certainly assure you of quality members whom you can get to know on an individual basis at our conferences.  
+                        <br/><br/><b>“A worldwide network of independent specialists in freight forwarding, customs brokerage and logistics solutions”.</b>
+                    </p>
+                    <br/>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-5 history-about">
+                    <img src="dist/images/history.png" width="100%"/>
+                </div>
+                <div class="col-md-7 video-about">
+                    <img src="dist/images/video-thumb.jpg" width="100%" />
+                    <video id="myVideo" width="100%" height="100%" controls>
+                        <source src="dist/video/gfg.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-4 testimo-about">
+                    <h1 class="introduction-head">TESTIMONIALS</h1>
+                    <input type="button" class="btn form-control btn-about" value="SEE ALL"/>
+                </div>
+                <div class="col-md-8 testimo-about-text test-hide" id="test-hide1">
+                    <br/>
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <br/>
+                    <em>“We value the GFG because…of the unique sales tool / selling point"</em>
+                    <br/><br/>
+                    <p>- Fast Forward Freight, Netherlands</p>
+                </div>
+                <div class="col-md-8 testimo-about-text test-hide" id="test-hide2" hidden>
+                    <br/>
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <br/>
+                    <em>“We value the GFG because… we can trust & believe every member in GFG and work together as a family with a good confidences."</em>
+                    <br/><br/>
+                    <p>- Hansaeng Express Company, South Korea</p>
+                </div>
+                <div class="col-md-8 testimo-about-text test-hide" id="test-hide3" hidden>
+                    <br/>
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <br/>
+                    <em>“We value the GFG because…  It gives us exposure to a large group of agents world wide that can contribute towards the growth of Heneways</em>
+                    <br/><br/>
+                    <p>- Heneways Freight Services (PTY) Ltd, South Africa</p>
+                </div>
+                <div class="col-md-8 testimo-about-text test-hide" id="test-hide4" hidden>
+                    <br/>
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <br/>
+                    <em>“We value the GFG because… the owners or top management of the companies who are members meet. Not only sales people who want to sell at every price and there is nothing to sell..."</em>
+                    <br/><br/>
+                    <p>- Jetivia Ltd, Switzerland</p>
+                </div>
+            </div>
+
+            <div class="col-md-9 sideli2 hide-div" hidden>
+                <div class="col-md-12 sidebar-about-text">
+                    <p><b>Article 01- Karl Heinz-Legler, achieves industry recognition</b></p>
+                    <p>Created on Tuesday, 02 August 2016</p>
+                    <p>The GFG's member for Canada, Rutherford Global Logistics, harbours an industry star in Karl Heinz-Legler...</p>
+                    <p>I should have realised that there was more to this story than first it seemed when I did a simple search for ‘Karl’ on the Canadian Sailings website and ended up with two pages of results, each denoting an article featuring said ‘Karl’.</p>
+                    <p>Karl has been busy!</p>
+                    <p>I shan’t try to cover all the articles here, suffice it to say you can find them all here: <a href="http://www.canadiansailings.ca" target="_blank" style="color: white">http://www.canadiansailings.ca</a></p>
+                    <p>So where to start?<br/>
+                        It would be an understatement to say that Karl has been heavily involved in Canadian freight.
+                    </p>
+                    <p>When he is not handling freight in his first official capacity as General Manager of the Rutherford Global Logistics’ Eastern Canada, he is volunteering his expertise, experience and services to affiliated industry organisations such as CIFFA and I.E. Canada, the Canadian Importers and Exporters Association.</p>
+                    <p>Let us first understand Karl’s official role and the resulting link with the Global Freight Group.</p>
+                    <p>Rutherford Global Logistics has been the exclusive Canadian member of the GFG since 1997.</p>
+                    <p>As well as Rutherford’s loyalty to the GFG as a member, their additional commitment of time and resources also deserves mention.  Rutherford are one of the very few members who have hosted not one, but two, of the GFG’s annual conferences.</p>
+                    <p>With 22 offices across Canada, the family owned business has a fine selection of locations to entice the GFG members to the annual GFG conference.  Toronto was the location for Rutherford’s first hosting experience, in 2002, and Vancouver for its second in 2013.  The welcoming Canadian team and fantastic locations resulted in the Rutherford team hosting two very memorable events for the GFG and its members.  (Learn more about Rutherford Global Logistics here.</p>
+                    <p>Karl has represented Rutherford Global Logistics at several Global Freight Group annual conferences, making friends on an international level with his endearing, easy manner and smile.  Surrounded by freight forwarders from across the globe, he is in his element. Networking comes naturally to him.</p>
+                    <p>One of Karl’s unofficial industry roles is that of member of the Canadian Freight Forwarders National Sea Freight Committee.  Within this role Karl was a driving force representing CIFFA and Canadian freight forwarders on the Canadian Stakeholder Group in discussions with Authorities, Ports, Carriers and Terminals alike and advice regarding the Canadian implementation guidelines for the new IMO SOLAS VGM regulations.</p>
+                    <p>Current CIFFA President, Mr J Cullen, felt that Karl’s input and participation warranted special mention.  Accordingly, Karl’s volunteer work was recognised at CIFFA’s 67th Annual General Meeting on 16th June 2016, where Mr Cullen presented Karl with a plaque in thanks for his valued contributions.</p>
+                    <p>CIFFA wasn’t the only industry association to recognise Karl’s important role in researching, discussing and representing Canada and freight forwarders regarding all the latest developments in industry regulations.  I.E. CANADA through their CATIE (Canadian Awards for Trade in Import and Export) also appreciated the value of Karl’s work and saw fit to recognise him accordingly, citing him for their Trade Compliance Leadership Award.</p>
+                    <p>The 2016 CATIE award for Trade Compliance Leadership could have been tailor-made to suit Karl’s role in the freight industry.  The recent developments and implementation of IMO SOLAS VGM have been the perfect example of what Karl does to support the logistics industry – gathering information and disseminating it, ensuring that all those who need to know do know.</p>
+                    <p>To recognize a Canadian customs compliance and trade professional who has been providing leadership, innovation and advocacy on behalf of their own company and other importers and exporters in Canada.</p>
+                    <p>The new regulations have entailed serious debate and input from various entities and Karl has made sure that he not only put forward pertinent points on behalf of all those in the industry but he also ensured that he relayed all the progress back to Rutherford, the GFG and his other contacts in the industry.  He has truly been a linchpin for developments.</p>
+                    <p>Karl has been instrumental in keeping the GFG members updated with regard to SOLAS, as you can see from the GFG’s own advisory page.</p>
+                    <br/><br/>
+                    <p><b>Article 02- USA Cargo & GFS 3 months on...</b></p>
+                    <p>Created on Tuesday, 19 April 2016</p>
+                    <p>Back in February we reported that the GFG's Atlanta export member, USA Cargo Services Co. had acquired Global Freight Services.  Read the original article here.  We are delighted to bring you an update, full of positive progress...</p>
+                    <p>Let it not be said that the GFG Atlanta member lets the grass grow under its feet!
+                        <br/><br/>Indeed, only 3 months after acquiring Global Freight Services, USA Cargo are welcoming lots of new business, as a result of the new acquisition.
+
+                        <br/><br/>USA Cargo’s Airfreight Manager, Mike McCauley, reported that, within a week, they had secured their first airfreight shipment from one of their new customers, moving from France to ATL.  Mike also confirmed that a second new customer has provided a shipment to Argentina.
+
+                        <br/><br/>With new freight business confirmed with France and Argentina, the GFG’s Atlanta member is certainly flexing its tentacles both far east across the Atlantic and also far south of their Atlanta HQ.  The GFG members there, Thales in France and ACSA Srl in Argentina, are both reaping the rewards that USA Cargo’s new business offers.
+
+                        <br/><br/>Whilst USA Cargo have long been experts at shipping globally, their acquisition of GFS is certainly bringing in some new business in those areas.
+
+                        <br/><br/>Not only that, but in true GFG spirit, they are sharing their good fortune and hard work with other GFG members, recommending GFG members in other countries to the new customers.
+
+                        <br/><br/>USA Cargo has also passed on opportunities to the GFG member in Canada (Rutherford Global Logistics), with trade show freight being shipped back from Vancouver.
+
+                        <br/><br/>Rumour has it there is also freight on the books moving from France to MEL, Australia coming up, so the GFG’s members in both those countries can look forward to future involvement.  This is the true benefit of belonging to the GFG: one member's success can benefit many others.
+                        USA Cargo’s acquisition of GFS is certainly producing global good fortune for them and the GFG members, making their international presence even more widely known.
+                        With freight movements literally spanning oceans and continents, there has been a knock on effect of good fortune around the GFG globe.
+                        If “what goes around, comes around”, the wave of good karma should be lapping at the door of USA Cargo any day now.
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="col-md-12 footer">
+            <div class="col-md-4">
+                <div class="col-md-12">
+                    <h5>21 YEARS OLD AND STILL LEARNING</h5>
+                    <hr />
+                    <p>Even after 21 years, and the fact that most of its founding members continue their membership, the GFG is not complacent.</p>
+                    <br/>
+                    <p>The GFG is one of the world's original, exclusive networks. The fact that one or two other groups now offer exclusivity proves we are doing it right and, since "imitation is the sincerest form of flattery", we thank them for their compliment.</p>
+                    <br/>
+                    <a href="#">READ MORE</a>
+                    <br/><br/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-12">
+                    <h5>GFG NEWS</h5>
+                    <hr />
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <br/>
+                    <a href="#">READ MORE</a>
+                    <br/>
+                    <div class="horizontal_dotted_line"></div>
+                    <br/>
+                    <p>Aliquam faucibus lectus ut orci vehicula tempor.</p>
+                    <br/>
+                    <a href="#">READ MORE</a>
+                    <br/>
+                    <div class="horizontal_dotted_line"></div>
+                    <br/>
+                    <p>Donec sit amet libero tristique</p>
+                    <a href="#">READ MORE</a>
+                    <br/><br/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-12">
+                    <h5>NEWSLETTER SIGNUP</h5>
+                    <hr />
+                    <input type="text" name="name" class="form-control" placeholder="Your Name"/>
+                    <br/>
+                    <input type="text" name="email" class="form-control" placeholder="Your Email"/>
+                    <br/>
+                    <input type="button" class="btn" value="Sign Up"/>
+                    <br/><br/>
+                    <div class="horizontal_dotted_line"></div>
+                    <br/>
+                    <p>Telephone : +44 1902 685158</p>
+                    <p>Fax : +44 1902 685164</p>
+                    <br/>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 footer-bottom">© 2016 - Global Freight Group.</div>
+        <div class="clearfix"></div>
+    </body>
+
+</html>

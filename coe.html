@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- JQUERY -->
+        <script src="dist/js/jquery-3.1.0.min.js"></script>
+        <!-- BOOTSTRAP -->
+        <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="dist/css/bootstrap-theme.min.css">
+        <script src="dist/js/bootstrap.min.js"></script>
+        <!-- SLIDER -->
+        <script src="dist/js/jassor.js"></script>
+        <link rel="stylesheet" href="dist/css/jassor.css">
+        <script src="dist/js/jssor.slider-21.1.5.mini.js" type="text/javascript"></script>
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="dist/css/main.css">
+        <!-- FONT AWSOME -->
+        <link rel="stylesheet" href="dist/font-awesome-4.6.3/css/font-awesome.min.css">
+
+        <script>
+            $(document).ready(function() {
+                $(document).on('click', '.mob-nav', function() {
+                    $('.mob-menu').slideToggle();
+                });
+
+                $('#myModal2').on('hide.bs.modal', function(e) {
+                    var vid = document.getElementById("myVideo");
+                    vid.pause();
+                });
+
+                $('#myModal2').on('show.bs.modal', function(e) {
+                    var vid = document.getElementById("myVideo");
+                    vid.play();
+                });
+
+                $(document).on('click', '.sideli', function() {
+                    $('.sidebar-about li').removeClass('active');
+                    $(this).addClass('active');
+                });
+
+                $(document).on('click', '.sidebar-about-text a', function() {
+                    $('.hide-p').slideToggle();
+                });
+
+                $(document).on('click', '.video-about img', function() {
+                    $(this).hide();
+                    var vid = document.getElementById("myVideo");
+                    vid.play();
+                });
+
+                $(document).on('click', '.sideli', function() {
+                    if (this.id != 'Documentation_') {
+                        $('.Documentation').slideUp();
+                    }
+                    $('.hide-div').hide();
+                    $('.' + this.id).fadeIn();
+                });
+
+                $(document).on('click', '.test-hide', function() {
+                    $('.test-hide').hide();
+                    var id = this.id;
+                    if (id == 'test-hide1') {
+                        $('#test-hide2').fadeIn();
+                    }
+                    if (id == 'test-hide2') {
+                        $('#test-hide3').fadeIn();
+                    }
+                    if (id == 'test-hide3') {
+                        $('#test-hide4').fadeIn();
+                    }
+                    if (id == 'test-hide4') {
+                        $('#test-hide1').fadeIn();
+                    }
+                });
+
+                $(document).on('click', '#Documentation_', function() {
+                    $('.Documentation').slideToggle();
+                });
+
+                $(document).on('click', '.li-doc', function() {
+                    $('.hide-div').hide();
+                    $('.' + this.id).fadeIn();
+                });
+            });
+        </script>
+
+        <title>Code of Ethics - Global Freight Group</title>
+    </head>
+
+    <body>
+        <div id="header-main">
+            <div class="col-md-3 col-sm-3 col-xs-3" id="logo-div">
+                <img id="logo-img" src="dist/images/logo.png" width="100%" />
+            </div>
+            <div class="col-md-9 col-sm-9 col-xs-9">
+                <div class="col-md-12 header-inner-top hidden-xs hidden-sm">
+                    <div class="col-md-7 header-inner-top-left"><a href="#">Future events</a> | <a href="#">Past events</a></div>
+                    <div class="col-md-2 header-inner-top-middle text-center">
+                        <div class="social-icon"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                        <div class="social-icon"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                        <div class="social-icon"><i class="fa fa-youtube" aria-hidden="true"></i></div>
+                    </div>
+                    <div class="col-md-3 header-inner-top-right">
+                        <div data-toggle="modal" data-target="#myModal" class="social-icon mlogin"><i class="fa fa-lock" aria-hidden="true"></i> MEMBER LOGIN</div>
+                    </div>
+
+                    <!-- POPUP -->
+                    <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <h3>SIGNUP FOR THE NEWSLETTER</h3>
+                                    <br/>
+                                    <p>Stay in the loop with our awesome newsletter. We'll send you monthly<br/>
+                                        updates of our latest and greatest tools and resources. </p><br/>
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" placeholder="EMAIL ADDRESS"/>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="button" class="btn form-control" value="SIGN UP"/>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-md-12 header-inner-bottom hidden-xs hidden-sm menu">
+                    <ul class="nav nav-pills pull-right"> 
+                        <li role="home"><a href="#">HOME</a></li>
+                        <li role="introduction"><a href="#">GFG INTRODUCTION</a></li>
+                        <li role="opportunities"><a href="#">MEMBERSHIP OPPORTUNITIES</a></li>
+                        <li role="news"><a href="#">GFG NEWS</a></li>
+                        <li role="directory"><a href="#">PARTNERSHIP DIRECTORY</a></li>
+                        <li role="service"><a href="#">SERVICE & INQUIRY</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12 visible-xs visible-sm mob-nav">
+                <i class="fa fa-bars pull-right" aria-hidden="true"></i>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12 header-inner-bottom mob-menu text-center">
+                <ul class="nav nav-pills"> 
+                    <li role="home"><a href="#">HOME</a></li>
+                    <li role="introduction"><a href="#">GFG INTRODUCTION</a></li>
+                    <li role="opportunities"><a href="#">MEMBERSHIP OPPORTUNITIES</a></li>
+                    <li role="news"><a href="#">GFG NEWS</a></li>
+                    <li role="directory"><a href="#">PARTNERSHIP DIRECTORY</a></li>
+                    <li role="service"><a href="#">SERVICE & INQUIRY</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <!-- SLIDER -->
+        <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 270px; overflow: hidden; visibility: hidden;">
+            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
+                <div data-p="225.00" style="display: none;">
+                    <img data-u="image" src="dist/images/about.jpg" />
+                </div>
+            </div>
+            <h1 class="member-directory" style="position: absolute; color: white !important; margin-top: 135px; margin-left: 108px;">CODE OF ETHICS</h1>
+            <span style="position: absolute; color: white !important; margin-top: 160px; margin-left: 108px; cursor: pointer">Home /</span>
+            <span style="position: absolute; color: white !important; margin-top: 160px; margin-left: 158px; cursor: pointer"> Code of Ethics</span>
+            <img style="position: absolute !important;margin-top: 182px;width: auto !important;right: 0px;" src="dist/images/members-only.png" />
+        </div>
+        <div class="clearfix"></div>
+
+        <!-- CONTENT -->
+        <div class="container">
+            <div class="col-md-3">
+                <div class="col-md-12 sidebar-about">
+                    <ul class="list-group">
+                        <li class="list-group-item sideli">GFG Member Only Area<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
+                        <li class="list-group-item sideli">GFG Member Media Center<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
+                        <li class="list-group-item sideli active" id="Documentation_">Documentation<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
+                        <ul class="list-group Documentation">
+                            <li class="list-group-item li-doc active2" id="li-doc1">Code of Ethics<i class="fa fa-caret-right pull-left" aria-hidden="true"></i></li>
+                            <li class="list-group-item li-doc">Exclusivity Rights<i class="fa fa-caret-right pull-left" aria-hidden="true"></i></li>
+                            <li class="list-group-item li-doc">Member to Member Insurance<i class="fa fa-caret-right pull-left" aria-hidden="true"></i></li>
+                            <li class="list-group-item li-doc">GFG ByLaws<i class="fa fa-caret-right pull-left" aria-hidden="true"></i></li>
+                            <li class="list-group-item li-doc">Expultion Criteria<i class="fa fa-caret-right pull-left" aria-hidden="true"></i></li>
+                            <li class="list-group-item li-doc">Penalties<i class="fa fa-caret-right pull-left" aria-hidden="true"></i></li>
+                        </ul>
+                        <li class="list-group-item sideli">Conferences<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
+                        <li class="list-group-item sideli">News<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
+                        <li class="list-group-item sideli">Member Directory<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
+                        <li class="list-group-item sideli">Member Gallery<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
+                        <li class="list-group-item sideli">Directors / Officers / Committees<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
+                        <li class="list-group-item sideli">Info Links<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9 hide-div li-doc1">
+                <h1 class="introduction-head" style="margin-top: -25px;">CODE OF ETHICS</h1>
+                <p><b>All members of the GFG agree to :</b></p>
+                <p>
+                <ul style="line-height: 1.9;">
+                    <li>Promote the Association concept, be willing to cooperate, develop, and use the Membership services as well as to promote the GFG logo on vehicles, stationery, etc;</li>
+                    <li>Commit to work with all the other GFG members;</li>
+                    <li>Develop GFG-related business only in their own geographic area.</li>
+                    <li>During the GFG meetings a member shall not solicit shipments in those areas where there is a regularly appointed member.</li>
+                    <li>Accept the targets /standards of the GFG determined by the BOD and approved by the assembly;</li>
+                    <li>Pay the fees/subscription and possible penalties within one month after the receipt of the invoice from the Association secretary; if a member owes conference fees or any other money to the GFG that is past due, they will not be allowed to attend the conference or sales meetings.</li>
+                    <li>Attend all meetings (for Full members). Attendance at the Fall meeting is mandatory for all members, unless modified by the Board of Directors;</li>
+                    <li>Stay at the hotel chosen by the BOD (if possible) where the meeting will be held, and remain in attendance for the entire meeting including all sales sessions;</li>
+                    <li>Provide and develop continual sales leads/programmes with partners;</li>
+                    <li>Deal with partners in a spirit of friendship, loyalty and trust;</li>
+                    <li>Reply to all sales leads within a 10- day period;</li>
+                    <li>Reply to all GFG communications within 48 hours, whether from the BOD, a committee, or another member.;</li>
+                    <li>Accept the penalties that the BOD may apply to members and agree that repetitive infractions by Aspirant,Observer or Full members, can be an obstruction to the confirmation/re-confirmation of Full membership.</li>
+                    <li>Attend both BOD meetings each year if elected to the BOD; the right to vote within the BOD is reserved to Full members.</li>
+               </ul>
+                </p>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="col-md-12 footer">
+            <div class="col-md-4">
+                <div class="col-md-12">
+                    <h5>21 YEARS OLD AND STILL LEARNING</h5>
+                    <hr />
+                    <p>Even after 21 years, and the fact that most of its founding members continue their membership, the GFG is not complacent.</p>
+                    <br/>
+                    <p>The GFG is one of the world's original, exclusive networks. The fact that one or two other groups now offer exclusivity proves we are doing it right and, since "imitation is the sincerest form of flattery", we thank them for their compliment.</p>
+                    <br/>
+                    <a href="#">READ MORE</a>
+                    <br/><br/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-12">
+                    <h5>GFG NEWS</h5>
+                    <hr />
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <br/>
+                    <a href="#">READ MORE</a>
+                    <br/>
+                    <div class="horizontal_dotted_line"></div>
+                    <br/>
+                    <p>Aliquam faucibus lectus ut orci vehicula tempor.</p>
+                    <br/>
+                    <a href="#">READ MORE</a>
+                    <br/>
+                    <div class="horizontal_dotted_line"></div>
+                    <br/>
+                    <p>Donec sit amet libero tristique</p>
+                    <a href="#">READ MORE</a>
+                    <br/><br/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-12">
+                    <h5>NEWSLETTER SIGNUP</h5>
+                    <hr />
+                    <input type="text" name="name" class="form-control" placeholder="Your Name"/>
+                    <br/>
+                    <input type="text" name="email" class="form-control" placeholder="Your Email"/>
+                    <br/>
+                    <input type="button" class="btn" value="Sign Up"/>
+                    <br/><br/>
+                    <div class="horizontal_dotted_line"></div>
+                    <br/>
+                    <p>Telephone : +44 1902 685158</p>
+                    <p>Fax : +44 1902 685164</p>
+                    <br/>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 footer-bottom">© 2016 - Global Freight Group.</div>
+        <div class="clearfix"></div>
+    </body>
+
+</html>
