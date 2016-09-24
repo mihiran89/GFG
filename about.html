@@ -53,23 +53,34 @@
                     $('.hide-div').hide();
                     $('.' + this.id).fadeIn();
                 });
-                
-                $(document).on('click','.test-hide',function (){
+
+                $(document).on('click', '.test-hide', function() {
                     $('.test-hide').hide();
                     var id = this.id;
-                    if(id=='test-hide1'){
+                    if (id == 'test-hide1') {
                         $('#test-hide2').fadeIn();
                     }
-                    if(id=='test-hide2'){
+                    if (id == 'test-hide2') {
                         $('#test-hide3').fadeIn();
                     }
-                    if(id=='test-hide3'){
+                    if (id == 'test-hide3') {
                         $('#test-hide4').fadeIn();
                     }
-                    if(id=='test-hide4'){
+                    if (id == 'test-hide4') {
                         $('#test-hide1').fadeIn();
                     }
                 });
+
+                $(document).on('click', '.directors-inner-tab', function() {
+                    $('.directors-inner .div').hide();
+                    $('.' + this.id).fadeIn();
+                    $('.directors-inner-tab').removeClass('active');
+                    $('.directors-inner-tab .fa-sort-desc').removeClass('active');
+                    $(this).addClass('active');
+                    $('.directors-inner-tab.active .fa-sort-desc').addClass('active');
+                });
+
+
             });
         </script>
 
@@ -168,7 +179,7 @@
                     <ul class="list-group">
                         <li class="list-group-item active sideli" id="sideli1">Overview<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
                         <li class="list-group-item sideli" id="sideli2">GFG Media<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
-                        <li class="list-group-item">Directors / Officers / Committees<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
+                        <li class="list-group-item sideli" id="sideli3">Directors / Officers / Committees<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
                     </ul>
                 </div>
             </div>
@@ -286,63 +297,262 @@
                 <div class="clearfix"></div>
             </div>
 
+            <div class="col-md-9 sideli3 hide-div directors-inner" hidden>
+                <div class="col-md-12">
+                    <div class="col-md-4 list-group-item directors-inner-tab active" id="directors-inner-tab1">DIRECTORS<i class="fa fa-sort-desc active" aria-hidden="true"></i></div>
+                    <div class="col-md-4 list-group-item directors-inner-tab" id="directors-inner-tab2">OFFICERS<i class="fa fa-sort-desc" aria-hidden="true"></i></div>
+                    <div class="col-md-4 list-group-item directors-inner-tab" id="directors-inner-ta3">COMMITIES<i class="fa fa-sort-desc" aria-hidden="true"></i></div>     
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-md-12 directors-inner-tab1 div">
+                    <div class="profile-section">
+                        <div class="col-md-2 profle-img">
+                            <img src="dist/images/directors/IIan.jpg"/>
+                        </div>
+                        <div class="col-md-4 profie-address">
+                            <b>Mr. Ilan Fidler</b><br/>
+                            <span style="font-style: italic">President</span>
+                            <br/><br/>
+                            ARI Shipping Corporation Inc<br/>
+                            80 Sheridan Boulevard, Inwood,<br/>
+                            New York 11096-1800<br/><br/>
+                            <b>Tel:</b> (1) 516-371-7770<br/>
+                            <b>Fax:</b> (1) 516-371-7757<br/>
+                            <b>E-mail:</b> ilan@arishipping.com<br/><br/>
+                            <a href="https://www.facebook.com/Arishippingcorp" target="_blank"><img src="dist/images/icon/fb.png" /></a>&nbsp;&nbsp;
+                            <a href="https://twitter.com/ARIshippingCorp" target="_blank"><img src="dist/images/icon/twitter.png" /></a>&nbsp;&nbsp;
+                            <a href="https://plus.google.com/118015790595735103452/about" target="_blank"><img src="dist/images/icon/gplus.png" /></a>&nbsp;&nbsp;
+                            <a href="https://www.youtube.com/channel/UCLSpUhxgWCWkXv19RAQQsmA" target="_blank"><img src="dist/images/icon/youtube.png" /></a>&nbsp;&nbsp;
+                            <a href="https://www.instagram.com/arishipping/" target="_blank"><img src="dist/images/icon/ins.png" /></a>&nbsp;&nbsp;
+                        </div>
+                        <div class="col-md-6 profile-desc">
+                            In the logistics industry since: 1984<br/>
+                            Specific expertise: Oversize and heavy machinery<br/>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="profile-section">
+                        <div class="col-md-2 profle-img">
+                            <img src="dist/images/directors/Niral.jpg"/>
+                        </div>
+                        <div class="col-md-4 profie-address">
+                            <b>Mr. Niral Kadawatharatchie</b><br/>
+                            <span style="font-style: italic">Vice President / Director</span>
+                            <br/><br/>
+                            Freight Links International (PTE) Ltd.<br/>
+                            Access Towers, Level 7,<br/>
+                            278, Union Place, Colombo 02, Sri Lanka<br/><br/>
+                            <b>Tel:</b> (94) 11-2302402<br/>
+                            <b>Fax:</b> (94) 11-2302412<br/>
+                            <b>E-mail:</b> niral@venture-resources.lk<br/><br/>
+                        </div>
+                        <div class="col-md-6 profile-desc">
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="profile-section">
+                        <div class="col-md-2 profle-img">
+                            <img src="dist/images/directors/nita.jpg"/>
+                        </div>
+                        <div class="col-md-4 profie-address">
+                            <b>Mrs. Nita Palhota</b><br/>
+                            <span style="font-style: italic">Director</span>
+                            <br/><br/>
+                            A.T.S. (Angola), Lda.<br/>
+                            Rua Amilcar Cabral 13,<br/>
+                            Luanda - Rep. Angola<br/><br/>
+                            <b>Tel:</b> (244) 222-398-242<br/>
+                            <b>Fax:</b> (244) 222-390-275<br/>
+                            <b>E-mail:</b> np.atslad@netcabo.co.ao<br/><br/>
+                        </div>
+                        <div class="col-md-6 profile-desc">
+                            In the logistics industry since: 1982.<br/>
+                            Areas of experience: Sea freight, logistics and distribuition, road freight, sales, air freight.<br/>
+                            Special expertise: live animals, perishables, project cargo. 
+
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="profile-section">
+                        <div class="col-md-2 profle-img">
+                            <img src="dist/images/directors/todd.jpg"/>
+                        </div>
+                        <div class="col-md-4 profie-address">
+                            <b>Mr. Todd Mordecai</b><br/>
+                            <span style="font-style: italic">Director</span>
+                            <br/><br/>
+                            USA Cargo Services Company.<br/>
+                            1343 Terrell Mill Road, Suite 200,<br/>
+                            GA 30067, USA<br/><br/>
+                            <b>Tel:</b> (1) 770 951 2155<br/>
+                            <b>Fax:</b> (1) 770 951 1198<br/>
+                            <b>E-mail:</b>todd@usacargo.com<br/><br/>
+                        </div>
+                        <div class="col-md-6 profile-desc">
+                            In the logistics industry since: 1996 <br/>
+                            Vice President – USA Cargo Services <br/>
+                            Experience: NVOCC Operations, airfreight operations, Refrigerated Cargo, Hazardous Certified<br/>
+                            Groups: Atlanta Maritime Association, Atlanta Logistics Connection, NCBFAA, USAPEEC 
+
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="profile-section">
+                        <div class="col-md-2 profle-img">
+                            <img src="dist/images/directors/dce.jpg"/>
+                        </div>
+                        <div class="col-md-4 profie-address">
+                            <b>Mr. Dave Cerasi</b><br/>
+                            <span style="font-style: italic">Director</span>
+                            <br/><br/>
+                            LSI, Logistics Solutions Ireland Limited.<br/>
+                            Unit 9A,Ashbourne Business Park,<br/>
+                            Ashbourne, County Meath, Dublin, Ireland<br/><br/>
+                            <b>Tel:</b> (353) 1-8499860<br/>
+                            <b>Fax:</b> (353) 1-8499861<br/>
+                            <b>E-mail:</b>dcerasi@lsilogistics.com<br/><br/>
+                        </div>
+                        <div class="col-md-6 profile-desc">
+                            In the logistics industry since: 1980<br/>
+                            Experience: European trucking, FCL / LCL, Project cargo, H&H, vessel and aircraft charter, port logistics, supply chain design and optimisation, 3PL.
+
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="profile-section">
+                        <div class="col-md-2 profle-img">
+                            <img src="dist/images/directors/ale.jpg"/>
+                        </div>
+                        <div class="col-md-4 profie-address">
+                            <b>Mr. Alejandro Castagnolo</b><br/>
+                            <span style="font-style: italic">Director</span>
+                            <br/><br/>
+                            Air Carry Service Agency ACSA SRL.<br/>
+                            Av. del Libertador 8580 Floor 13D,<br/>
+                            1429 Buenos Aires, Argentina<br/><br/>
+                            <b>Tel:</b> (54) 11-5778-1812<br/>
+                            <b>Fax:</b> (54) 11-5778-1812<br/>
+                            <b>E-mail:</b>acastagnolo@acsasrl.com<br/><br/>
+                        </div>
+                        <div class="col-md-6 profile-desc">
+                            Dedicated to freight forwarding since 2000<br/>
+                            Qualifications: Bachelor degree in International Trade<br/>
+                            Licensed Transport Broker (A.T.A.) by Argentine Customs<br/>
+                            D.G.R. Operator by I.A.T.A <br/>
+                            Member of the board of the Argentina Freight Forwarder Asociation (A.A.A.C.I)
+
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="profile-section">
+                        <div class="col-md-2 profle-img">
+                            <img src="dist/images/directors/ulrich.jpg"/>
+                        </div>
+                        <div class="col-md-4 profie-address">
+                            <b>Mr. Ulrich Jungbluth</b><br/>
+                            <span style="font-style: italic">Director</span>
+                            <br/><br/>
+                            Globe Cargo International GmbH.<br/>
+                            Fasanenweg 6,<br/>
+                            65451 Frankfurt, Germany<br/><br/>
+                            <b>Tel:</b> (49) 6107-98660<br/>
+                            <b>Fax:</b> (49) 6107-986649<br/>
+                            <b>E-mail:</b>ujungbluth@globecargo.de<br/><br/>
+                        </div>
+                        <div class="col-md-6 profile-desc">
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="col-md-12 directors-inner-tab2 div" hidden>
+                    <div class="profile-section">
+                        <div class="col-md-2 profle-img">
+                            <img src="dist/images/directors/richard.jpg"/>
+                        </div>
+                        <div class="col-md-4 profie-address">
+                            <b>Mr. Richard Cope</b><br/>
+                            <span style="font-style: italic">Treasurer</span>
+                            <br/><br/>
+                            USA Cargo Services Company.<br/>
+                            1343 Terrell Mill Road, Suite 200,<br/>
+                            Marietta, GA 30067, USA<br/><br/>
+                            <b>Tel:</b> (1) 770 951 2155<br/>
+                            <b>Fax:</b> (1) 770 951 1198<br/>
+                            <b>E-mail:</b>richard@usacargo.com<br/><br/>
+                        </div>
+                        <div class="col-md-6 profile-desc">
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 directors-inner-tab3 div" hidden></div>
+            <div class="clearfix"></div>
         </div>
 
-        <!-- FOOTER -->
-        <div class="col-md-12 footer">
-            <div class="col-md-4">
-                <div class="col-md-12">
-                    <h5>21 YEARS OLD AND STILL LEARNING</h5>
-                    <hr />
-                    <p>Even after 21 years, and the fact that most of its founding members continue their membership, the GFG is not complacent.</p>
-                    <br/>
-                    <p>The GFG is one of the world's original, exclusive networks. The fact that one or two other groups now offer exclusivity proves we are doing it right and, since "imitation is the sincerest form of flattery", we thank them for their compliment.</p>
-                    <br/>
-                    <a href="#">READ MORE</a>
-                    <br/><br/>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="col-md-12">
-                    <h5>GFG NEWS</h5>
-                    <hr />
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <br/>
-                    <a href="#">READ MORE</a>
-                    <br/>
-                    <div class="horizontal_dotted_line"></div>
-                    <br/>
-                    <p>Aliquam faucibus lectus ut orci vehicula tempor.</p>
-                    <br/>
-                    <a href="#">READ MORE</a>
-                    <br/>
-                    <div class="horizontal_dotted_line"></div>
-                    <br/>
-                    <p>Donec sit amet libero tristique</p>
-                    <a href="#">READ MORE</a>
-                    <br/><br/>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="col-md-12">
-                    <h5>NEWSLETTER SIGNUP</h5>
-                    <hr />
-                    <input type="text" name="name" class="form-control" placeholder="Your Name"/>
-                    <br/>
-                    <input type="text" name="email" class="form-control" placeholder="Your Email"/>
-                    <br/>
-                    <input type="button" class="btn" value="Sign Up"/>
-                    <br/><br/>
-                    <div class="horizontal_dotted_line"></div>
-                    <br/>
-                    <p>Telephone : +44 1902 685158</p>
-                    <p>Fax : +44 1902 685164</p>
-                    <br/>
-                </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="col-md-12 footer">
+        <div class="col-md-4">
+            <div class="col-md-12">
+                <h5>21 YEARS OLD AND STILL LEARNING</h5>
+                <hr />
+                <p>Even after 21 years, and the fact that most of its founding members continue their membership, the GFG is not complacent.</p>
+                <br/>
+                <p>The GFG is one of the world's original, exclusive networks. The fact that one or two other groups now offer exclusivity proves we are doing it right and, since "imitation is the sincerest form of flattery", we thank them for their compliment.</p>
+                <br/>
+                <a href="#">READ MORE</a>
+                <br/><br/>
             </div>
         </div>
-        <div class="col-md-12 footer-bottom">© 2016 - Global Freight Group.</div>
-        <div class="clearfix"></div>
-    </body>
+        <div class="col-md-4">
+            <div class="col-md-12">
+                <h5>GFG NEWS</h5>
+                <hr />
+                <p>Lorem ipsum dolor sit amet.</p>
+                <br/>
+                <a href="#">READ MORE</a>
+                <br/>
+                <div class="horizontal_dotted_line"></div>
+                <br/>
+                <p>Aliquam faucibus lectus ut orci vehicula tempor.</p>
+                <br/>
+                <a href="#">READ MORE</a>
+                <br/>
+                <div class="horizontal_dotted_line"></div>
+                <br/>
+                <p>Donec sit amet libero tristique</p>
+                <a href="#">READ MORE</a>
+                <br/><br/>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="col-md-12">
+                <h5>NEWSLETTER SIGNUP</h5>
+                <hr />
+                <input type="text" name="name" class="form-control" placeholder="Your Name"/>
+                <br/>
+                <input type="text" name="email" class="form-control" placeholder="Your Email"/>
+                <br/>
+                <input type="button" class="btn" value="Sign Up"/>
+                <br/><br/>
+                <div class="horizontal_dotted_line"></div>
+                <br/>
+                <p>Telephone : +44 1902 685158</p>
+                <p>Fax : +44 1902 685164</p>
+                <br/>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 footer-bottom">© 2016 - Global Freight Group.</div>
+    <div class="clearfix"></div>
+</body>
 
 </html>

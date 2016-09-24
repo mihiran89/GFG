@@ -478,6 +478,54 @@ body{
     margin-bottom: 20px;
 }
 
+.directors-inner-tab.active{
+    background-color: #E73B27 !important;
+    color: white !important;
+    border-color: #E73B27 !important;
+    background-image: none !important;
+    border-radius: 0px !important;
+    text-shadow: none !important;
+    text-align: center;
+}
+
+.directors-inner-tab{
+    cursor: pointer;
+    border-radius: 0px !important;
+    border-right-color: transparent !important;
+    border-left-color: transparent !important;
+    border-bottom: 1px solid #eaeaea !important;
+    background-color: #efefef;
+    color: dimgray;
+    text-align: center;
+    position: relative;
+}
+.directors-inner-tab .fa-sort-desc{
+    position: absolute;
+    color: transparent !important;
+    margin-top: 16px;
+    font-size: 25px;
+    margin-left: -45px;
+}
+.directors-inner-tab .fa-sort-desc.active{
+    position: absolute;
+    color: #E73B27 !important;
+    margin-top: 16px;
+    font-size: 25px;
+    margin-left: -45px;
+}
+.profile-section{
+    margin-top: 20px;
+    border: 1px solid #ffb9b9;
+    color: dimgray;
+}
+.profile-section div{
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+.profle-img img{
+    max-width: 100%;
+}
+
 @media (max-width: 991px){
     .ad{
         border-right-width: 3px;
