@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- JQUERY -->
+        <script src="dist/js/jquery-3.1.0.min.js"></script>
+        <!-- BOOTSTRAP -->
+        <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="dist/css/bootstrap-theme.min.css">
+        <script src="dist/js/bootstrap.min.js"></script>
+        <!-- SLIDER -->
+        <script src="dist/js/jassor.js"></script>
+        <link rel="stylesheet" href="dist/css/jassor.css">
+        <script src="dist/js/jssor.slider-21.1.5.mini.js" type="text/javascript"></script>
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="dist/css/main.css">
+        <!-- FONT AWSOME -->
+        <link rel="stylesheet" href="dist/font-awesome-4.6.3/css/font-awesome.min.css">
+
+        <script>
+            $(document).ready(function() {
+                $(document).on('click', '.mob-nav', function() {
+                    $('.mob-menu').slideToggle();
+                });
+            });
+        </script>
+        <style>
+            .container img{
+                max-width: 100%;
+            }
+        </style>
+        <title>News - Global Freight Group</title>
+    </head>
+
+    <body>
+        <div id="header-main">
+            <div class="col-md-3 col-sm-3 col-xs-3" id="logo-div">
+                <img id="logo-img" src="dist/images/logo.png" width="100%" />
+            </div>
+            <div class="col-md-9 col-sm-9 col-xs-9">
+                <div class="col-md-12 header-inner-top hidden-xs hidden-sm">
+                    <div class="col-md-7 header-inner-top-left"><a href="#">Future events</a> | <a href="#">Past events</a></div>
+                    <div class="col-md-2 header-inner-top-middle text-center">
+                        <div class="social-icon"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                        <div class="social-icon"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                        <div class="social-icon"><i class="fa fa-youtube" aria-hidden="true"></i></div>
+                    </div>
+                    <div class="col-md-3 header-inner-top-right">
+                        <div data-toggle="modal" data-target="#myModal" class="social-icon mlogin"><i class="fa fa-lock" aria-hidden="true"></i> MEMBER LOGIN</div>
+                    </div>
+
+                    <!-- POPUP -->
+                    <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <h3>SIGNUP FOR THE NEWSLETTER</h3>
+                                    <br/>
+                                    <p>Stay in the loop with our awesome newsletter. We'll send you monthly<br/>
+                                        updates of our latest and greatest tools and resources. </p><br/>
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" placeholder="EMAIL ADDRESS"/>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="button" class="btn form-control" value="SIGN UP"/>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-md-12 header-inner-bottom hidden-xs hidden-sm menu">
+                    <ul class="nav nav-pills pull-right"> 
+                        <li role="home"><a href="#">HOME</a></li>
+                        <li role="introduction"><a href="#">GFG INTRODUCTION</a></li>
+                        <li role="opportunities"><a href="#">MEMBERSHIP OPPORTUNITIES</a></li>
+                        <li role="news"><a href="#">GFG NEWS</a></li>
+                        <li role="directory"><a href="#">PARTNERSHIP DIRECTORY</a></li>
+                        <li role="service"><a href="#">SERVICE & INQUIRY</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12 visible-xs visible-sm mob-nav">
+                <i class="fa fa-bars pull-right" aria-hidden="true"></i>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12 header-inner-bottom mob-menu text-center">
+                <ul class="nav nav-pills"> 
+                    <li role="home"><a href="#">HOME</a></li>
+                    <li role="introduction"><a href="#">GFG INTRODUCTION</a></li>
+                    <li role="opportunities"><a href="#">MEMBERSHIP OPPORTUNITIES</a></li>
+                    <li role="news"><a href="#">GFG NEWS</a></li>
+                    <li role="directory"><a href="#">PARTNERSHIP DIRECTORY</a></li>
+                    <li role="service"><a href="#">SERVICE & INQUIRY</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <!-- SLIDER -->
+        <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 270px; overflow: hidden; visibility: hidden;">
+            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
+                <div data-p="225.00" style="display: none;">
+                    <img data-u="image" src="dist/images/about.jpg" />
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <!-- CONTENT -->
+        <div class="container">
+            <div class="col-md-12">
+                <h1 class="new-membership">CONFERENCE NEWS</h1>
+                <br/><p><b>Conference 01</b></p>
+                <p>MANDATORY 2014 CONFERENCE ~ DUBLIN, IRELAND</p>
+                <br/>
+            </div>
+            <div class="col-md-7">
+                <img src="dist/images/con1.jpg" />
+            </div>
+            <div class="col-md-4">
+                <img src="dist/images/con2.jpg" />
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12"><br/>
+                <p>The Global Freight Group has just enjoyed its 20th Anniversary conference in the beautiful city of Dublin.  With The Four Seasons Hotel as its venue, quality was ensured.
+                    <br/><br/>The meeting of 100 participants from its global membership met for the GFG's annual conference from 19 - 21 O ctober 2014.  With the location providing a stunning backdrop for business, members settled down to learn about developments within the GFG at the General Assembly, before their own face-to-face meetings during the following days.
+                    <br/><br/>With just under 1,400 one-to-one sales meetings, there was quite some business to be done!
+                    <br/><br/>
+                </p>
+                <p>The GFG introduced two new members to the Global Freight Group:
+                    <br/>Greece: Grandair Ltd
+                    <br/>Thailand: Leo Global Logistics Co., Ltd
+                </p>
+                <br/>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-6">
+                <img src="dist/images/con3.jpg" />
+            </div>
+            <div class="col-md-6">
+                <img src="dist/images/con4.jpg" />
+            </div>
+            <div class="clearfix"><br/></div>
+            <br/>
+            <br/>
+            <br/>
+            <div class="col-md-5">
+                <img src="dist/images/con5.jpg" />
+            </div>
+            <div class="col-md-12"><br/>
+                <p>
+                    Well known as the friendliest network you can join, our members proved the point by choosing to take a day to enjoy the Irish countryside together.  With Kilkenny and Glendalough on the itinerary they received a stunning overview of Ireland's renowned countryside.  Rain stopped long enough for them to play - exploring caves, castles and cloisters and follow the river alongside the monastic ruins.
+                </p>
+            </div>
+            <div class="col-md-12"><br/>
+                <p>To ensure you are involved in the next GFG gathering to enjoy all aspects of the friendly network at its best, don't delay in visiting our "Membership Opportunities" page to start your application today...
+                </p>
+            </div>
+            <br/><br/><br/>
+            <div class="col-md-12"><br/>
+                <br/><p><b>Conference 02</b></p>
+                <p>CONFERENCE NEWS - LOS ANGELES, USA - APRIL 2014</p>
+                <br/>
+            </div>
+            <div class="col-md-4">
+                <img src="dist/images/con6.jpg" />
+            </div>
+            <div class="clearfix"><br/></div>
+            <div class="col-md-12"><br/>
+                <p>"The GFG was perhaps keeping work uppermost when it held its April 2014 conference literally opposite LAX airport, at the Embassy Suites LAX South...
+                    <br/><br/>GFG Group Administrator, Rachel Marchant, reports on the Los Angeles conference, 27 - 29 April 2014
+
+                    <br/><br/>The planes were taking off as was the GFG's 5th Los Angeles casual conference …
+                    <br/><br/>Having stayed at the Embassy Suites LAX South several times, it ahd been decided to try the Embassy Suites LAX South for a different view.  Easy and quick transfers from airport to hotel afforded members the convenience of venue, even if LAX's main attractions were somewhat further away.  There would be no distractions from the meetings!
+                </p>
+            </div>
+            <div class="clearfix"></div>
+            <br/>
+            <div class="col-md-6">
+                <img src="dist/images/con7.jpg" />
+            </div>
+            <div class="col-md-6">
+                <img src="dist/images/con8.jpg" />
+            </div>
+            <div class="clearfix"></div>
+            <br/><br/>
+            <div class="col-md-5">
+                <img src="dist/images/con9.jpg" />
+            </div>
+            <div class="col-md-7">
+                <p>IB&M and kindly offered some sponsorship towards the welcome party, sharing their products and services amongst the GFG members.</p>
+            </div>
+            <div class="clearfix"><br/></div>
+            <br/><br/>
+            <div class="col-md-4">
+                <img src="dist/images/con10.jpg" />
+            </div>
+            <div class="col-md-6">
+                <p>With 50% attendance at what is essentially an optional extra conference, there were plenty of companies with which to meet.  However, to start off the meeting on a sociable note, the members met for a welcome party in style.                                                              
+                    <br/><br/>Left: Local host company, Ken Hamanaka's owners kindly invite all GFG members to a Mexican themed party.
+                    <br/><br/>
+                    <img src="dist/images/con11.jpg" />
+                </p>
+            </div>
+            <div class="clearfix"><br/></div><br/><br/>
+            <div class="col-md-3">
+                <img src="dist/images/con12.jpg" />
+            </div><div class="col-md-3">
+                <p>Meetings are over time to learn about yourself...
+                    <br/>Adding value to the meetings.
+                </p>
+            </div><div class="col-md-3">
+                <img src="dist/images/con13.jpg" />
+            </div><div class="col-md-3">
+                <p>The GFG's friendly nature meant that this was not just a gathering of 30+ companies but a gathering of 45+ friends.  Although the main motive is business, there were plentiful opportunities for socialising and strengthening the relationships for which the network is reknowned.
+                    <br/>Left: GFG members enjoyed pizza at Rock and Brews Restaurant
+                </p>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="col-md-12 footer">
+            <div class="col-md-4">
+                <div class="col-md-12">
+                    <h5>21 YEARS OLD AND STILL LEARNING</h5>
+                    <hr />
+                    <p>Even after 21 years, and the fact that most of its founding members continue their membership, the GFG is not complacent.</p>
+                    <br/>
+                    <p>The GFG is one of the world's original, exclusive networks. The fact that one or two other groups now offer exclusivity proves we are doing it right and, since "imitation is the sincerest form of flattery", we thank them for their compliment.</p>
+                    <br/>
+                    <a href="#">READ MORE</a>
+                    <br/><br/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-12">
+                    <h5>GFG NEWS</h5>
+                    <hr />
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <br/>
+                    <a href="#">READ MORE</a>
+                    <br/>
+                    <div class="horizontal_dotted_line"></div>
+                    <br/>
+                    <p>Aliquam faucibus lectus ut orci vehicula tempor.</p>
+                    <br/>
+                    <a href="#">READ MORE</a>
+                    <br/>
+                    <div class="horizontal_dotted_line"></div>
+                    <br/>
+                    <p>Donec sit amet libero tristique</p>
+                    <a href="#">READ MORE</a>
+                    <br/><br/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-12">
+                    <h5>NEWSLETTER SIGNUP</h5>
+                    <hr />
+                    <input type="text" name="name" class="form-control" placeholder="Your Name"/>
+                    <br/>
+                    <input type="text" name="email" class="form-control" placeholder="Your Email"/>
+                    <br/>
+                    <input type="button" class="btn" value="Sign Up"/>
+                    <br/><br/>
+                    <div class="horizontal_dotted_line"></div>
+                    <br/>
+                    <p>Telephone : +44 1902 685158</p>
+                    <p>Fax : +44 1902 685164</p>
+                    <br/>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 footer-bottom">© 2016 - Global Freight Group.</div>
+        <div class="clearfix"></div>
+    </body>
+
+</html>
