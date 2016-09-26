@@ -83,6 +83,18 @@
                     $('.hide-div').hide();
                     $('.' + this.id).fadeIn();
                 });
+
+                $(document).on('click', '.sideli6 li', function() {
+                    $('.sideli6 li').removeClass('active3');
+                    $(this).addClass('active3');
+                });
+
+                $(document).on('click', '.srch', function() {
+                    $('.srch-hid').hide();
+                    $('.' + this.id).fadeIn();
+                });
+
+
             });
         </script>
 
@@ -97,6 +109,35 @@
             .profile-img-div{
                 text-align: center;
                 background-color: #a3a3a3;
+            }
+            .sideli6 .active3 a{
+                background-color: #E73B27 !important;
+                color: white !important;
+                border-radius: 0px !important;
+                border-color: #E73B27 !important;
+            }
+            .sideli6 li a{
+                color: dimgray !important;
+                background-color: #efefef;
+                border-radius: 0px !important;
+                cursor: pointer;
+            }
+            .sideli6 li a:hover{
+                background-color: #E73B27 !important;
+                color: white !important;
+                border-radius: 0px !important;
+            }
+            .contact{
+                background-color: #f6f6f6;
+                color: #747474;
+                line-height: 2;
+                font-size: 12px;
+                min-height: 175px;
+                position: relative;
+            }
+            .member-dir{
+                margin-top: 15px;
+                padding: 0px;
             }
         </style>
         <title>Code of Ethics - Global Freight Group</title>
@@ -209,7 +250,7 @@
                         </ul>
                         <li class="list-group-item sideli">Conferences<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
                         <li class="list-group-item sideli">News<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
-                        <li class="list-group-item sideli">Member Directory<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
+                        <li class="list-group-item sideli" id="sideli6">Member Directory<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
                         <li class="list-group-item sideli" id="sideli7">Member Gallery<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
                         <li class="list-group-item sideli">Directors / Officers / Committees<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
                         <li class="list-group-item sideli">Info Links<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
@@ -560,6 +601,151 @@
                     <div class="profile-img-div"><img src="dist/images/profile.jpg" style="max-width: 100%"/></div>
                     <br/>John Doe
                     <br/>Company Name
+                </div>
+            </div>
+
+            <div class="col-md-9 hide-div sideli6" hidden>
+                <div class="col-md-12" style="margin-bottom: -1px;"><ul class="nav nav-tabs">
+                        <li><a class="srch" id="gs">GENERAL SEARCH</a></li>
+                        <li class="active3"><a class="srch" id="as">ADVANCED SEARCH</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-12 srch-hid gs">
+
+                </div>
+                <div class="col-md-12 srch-hid as">
+                    <div class="col-md-12" style="background-color: #E73B27 !important; color: white; line-height: 3; padding: 25px;">
+                        <div class="col-md-5">
+                            <div class="col-md-12">Company</div>
+                            <div class="col-md-6">
+                                <select class="form-control">
+                                    <option>Is exactly</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="col-md-12">Country</div>
+                            <div class="col-md-6">
+                                <select class="form-control">
+                                    <option>Is exactly</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-2 text-center">
+                        </div><div class="col-md-5">
+                            <div class="col-md-12">Company</div>
+                            <div class="col-md-6">
+                                <select class="form-control">
+                                    <option>Is exactly</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="col-md-12">Country</div>
+                            <div class="col-md-6">
+                                <select class="form-control">
+                                    <option>Is exactly</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <input class="btn" value="Sign Up" type="button" style="color: white;border: 1px solid white;background-color: red;">
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="col-md-12 member-dir">
+                        <div class="col-md-2" style="max-height: 175px; padding: 0px; background-color: #eee;">
+                            <img src="dist/images/profile.jpg" style="max-width: 100%;max-height: 175px;" />
+                        </div>
+                        <div class="col-md-10 contact">
+                            <div class="col-md-12" style="margin-bottom: 17px;border-bottom: 1px solid #d8d8d8;margin-top: 16px;"><h1 class="member-directory" >MEMBER NAME</h1>
+                            </div>
+                            <div class="col-md-12">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i> 597 Brown Avenue, Columbia, SC 29201 
+                            </div>
+                            <div class="col-md-6">
+                                <i class="fa fa-phone" aria-hidden="true"></i> 864-912-4880<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;864-912-4880
+                            </div>
+                            <div class="col-md-6">
+                                <i class="fa fa-fax" aria-hidden="true"></i> 864-912-4880
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-md-6">
+                                <i class="fa fa-globe" aria-hidden="true"></i> www.abccompany.com
+                            </div>
+                            <div class="col-md-6">
+                                <i class="fa fa-envelope" aria-hidden="true"></i> info@abccompany.com
+                            </div>
+                            <img src="dist/images/more.png" style="position: absolute;right: 0px;bottom: 0;" />
+                        </div>
+                    </div>
+                    <div class="col-md-12 member-dir">
+                        <div class="col-md-2" style="max-height: 175px; padding: 0px; background-color: #eee;">
+                            <img src="dist/images/profile.jpg" style="max-width: 100%;max-height: 175px;" />
+                        </div>
+                        <div class="col-md-10 contact">
+                            <div class="col-md-12" style="margin-bottom: 17px;border-bottom: 1px solid #d8d8d8;margin-top: 16px;"><h1 class="member-directory" >MEMBER NAME</h1>
+                            </div>
+                            <div class="col-md-12">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i> 597 Brown Avenue, Columbia, SC 29201 
+                            </div>
+                            <div class="col-md-6">
+                                <i class="fa fa-phone" aria-hidden="true"></i> 864-912-4880<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;864-912-4880
+                            </div>
+                            <div class="col-md-6">
+                                <i class="fa fa-fax" aria-hidden="true"></i> 864-912-4880
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-md-6">
+                                <i class="fa fa-globe" aria-hidden="true"></i> www.abccompany.com
+                            </div>
+                            <div class="col-md-6">
+                                <i class="fa fa-envelope" aria-hidden="true"></i> info@abccompany.com
+                            </div>
+                            <img src="dist/images/more.png" style="position: absolute;right: 0px;bottom: 0;" />
+                        </div>
+                    </div>
+                    <div class="col-md-12 member-dir">
+                        <div class="col-md-2" style="max-height: 175px; padding: 0px; background-color: #eee;">
+                            <img src="dist/images/profile.jpg" style="max-width: 100%;max-height: 175px;" />
+                        </div>
+                        <div class="col-md-10 contact">
+                            <div class="col-md-12" style="margin-bottom: 17px;border-bottom: 1px solid #d8d8d8;margin-top: 16px;"><h1 class="member-directory" >MEMBER NAME</h1>
+                            </div>
+                            <div class="col-md-12">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i> 597 Brown Avenue, Columbia, SC 29201 
+                            </div>
+                            <div class="col-md-6">
+                                <i class="fa fa-phone" aria-hidden="true"></i> 864-912-4880<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;864-912-4880
+                            </div>
+                            <div class="col-md-6">
+                                <i class="fa fa-fax" aria-hidden="true"></i> 864-912-4880
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-md-6">
+                                <i class="fa fa-globe" aria-hidden="true"></i> www.abccompany.com
+                            </div>
+                            <div class="col-md-6">
+                                <i class="fa fa-envelope" aria-hidden="true"></i> info@abccompany.com
+                            </div>
+                            <img src="dist/images/more.png" style="position: absolute;right: 0px;bottom: 0;" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
