@@ -95,6 +95,15 @@
                     $('.srch-hid').hide();
                     $('.' + this.id).fadeIn();
                 });
+
+                $(document).on('click', '.directors-inner-tab', function() {
+                    $('.directors-inner .div').hide();
+                    $('.' + this.id).fadeIn();
+                    $('.directors-inner-tab').removeClass('active');
+                    $('.directors-inner-tab .fa-sort-desc').removeClass('active');
+                    $(this).addClass('active');
+                    $('.directors-inner-tab.active .fa-sort-desc').addClass('active');
+                });
             });
         </script>
         <style>
@@ -140,6 +149,21 @@
             }
             select{
                 border-radius: 0px !important;
+            }
+            .div{
+                background-color: #efefef;
+                padding: 20px;
+                color: dimgray;
+                min-height: 225px;
+            }
+            .newactive .active{
+                background-color: #efefef !important;
+                color: dimgray !important;
+                border: 1px solid #efefef !important;
+            }
+            .newactive .directors-inner-tab{
+                background-color: #e73b27;
+                color: white;
             }
         </style>
         <title>Membership Application - Global Freight Group</title>
@@ -227,9 +251,9 @@
                     <img data-u="image" src="dist/images/about.jpg" />
                 </div>
             </div>
-            <h1 class="member-directory" style="position: absolute; color: white !important; margin-top: 135px; margin-left: 108px;">PARTNER DIRECTORY</h1>
+            <h1 class="member-directory" style="position: absolute; color: white !important; margin-top: 135px; margin-left: 108px;">MEMBERSHIP APPLICATION</h1>
             <span style="position: absolute; color: white !important; margin-top: 160px; margin-left: 108px; cursor: pointer">Home /</span>
-            <span style="position: absolute; color: white !important; margin-top: 160px; margin-left: 158px; cursor: pointer"> Partner Directory</span>
+            <span style="position: absolute; color: white !important; margin-top: 160px; margin-left: 158px; cursor: pointer"> Partner Membership Application</span>
         </div>
         <div class="clearfix"></div>
 
@@ -319,6 +343,46 @@
                 </div>
             </div>
 
+            <div class="col-md-9 hide-div sideli-com sideli2 directors-inner" hidden>
+                <div class="col-md-12">
+                    <div class="col-md-12 text-center" style="color: white; background-color: #E73B27 !important; padding: 50px; font-size: 30px">
+                        OFFER BANNER
+                    </div>
+                    <div class="clearfix"></div>
+                    <p style="color: dimgray; margin-top: 15px">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut pellentesque arcu. Sed ultricies velit sed iaculis malesuada.
+                        Donec vitae metus eros. Aliquam nisi nulla, lacinia ac purus sed, elementum lacinia magna. Ut ut mattis sem. Nunc non
+                        tincidunt magna, varius mollis velit. Donec id ipsum tempor, tempor justo at, efficitur dui.
+                    </p>
+                    <br/>
+                </div>
+                <div class="col-md-12 newactive">
+                    <div class="col-md-3 list-group-item directors-inner-tab active" id="directors-inner-tab1">Full Member</div>
+                    <div class="col-md-3 list-group-item directors-inner-tab" id="directors-inner-tab2">Aspirant Member</div>
+                    <div class="col-md-3 list-group-item directors-inner-tab" id="directors-inner-tab3">Observer</div>     
+                    <div class="col-md-3 list-group-item directors-inner-tab" id="directors-inner-tab4">Affiliate Member</div>     
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-12 directors-inner-tab1 div">
+                        <br/>
+                        <b>EXCLUSIVE RIGHT TO VOTE</b>
+                        <br/><br/>
+                        <p>Obligation to attend annual meetings</p>
+                        <br/>
+                        <b>Entry Fee: </b>$500<br/>
+                        <b>Subscription: </b>Proin imperdiet elementum libero, dapibus sodales ipsum aliquam et. Donec tellus urna, aliquet id sapien
+                        sit amet, vehicula lobortis libero.
+
+                    </div>
+                    <div class="col-md-12 directors-inner-tab2 div" hidden>
+                    </div>
+                    <div class="col-md-12 directors-inner-tab3 div" hidden>
+                    </div>
+                    <div class="col-md-12 directors-inner-tab4 div" hidden>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- FOOTER -->
