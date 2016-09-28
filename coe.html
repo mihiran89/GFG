@@ -81,6 +81,8 @@
 
                 $(document).on('click', '.li-doc', function() {
                     $('.hide-div').hide();
+                    $('.li-doc').removeClass('active2');
+                    $(this).addClass('active2');
                     $('.' + this.id).fadeIn();
                 });
 
@@ -242,7 +244,7 @@
                         <li class="list-group-item sideli active" id="Documentation_">Documentation<i class="fa fa-caret-right pull-right" aria-hidden="true"></i></li>
                         <ul class="list-group Documentation">
                             <li class="list-group-item li-doc active2" id="li-doc1">Code of Ethics<i class="fa fa-caret-right pull-left" aria-hidden="true"></i></li>
-                            <li class="list-group-item li-doc">Exclusivity Rights<i class="fa fa-caret-right pull-left" aria-hidden="true"></i></li>
+                            <li class="list-group-item li-doc" id="li-doc2">Exclusivity Rights<i class="fa fa-caret-right pull-left" aria-hidden="true"></i></li>
                             <li class="list-group-item li-doc">Member to Member Insurance<i class="fa fa-caret-right pull-left" aria-hidden="true"></i></li>
                             <li class="list-group-item li-doc">GFG ByLaws<i class="fa fa-caret-right pull-left" aria-hidden="true"></i></li>
                             <li class="list-group-item li-doc">Expultion Criteria<i class="fa fa-caret-right pull-left" aria-hidden="true"></i></li>
@@ -509,8 +511,33 @@
                     <br/><br/>2. failure to pay fees to the GFG by the required date $200 (for each missing payment)
                 </p>
             </div>
+            
+            <!-- CODE OF ETHICS -->
             <div class="col-md-9 hide-div li-doc1">
                 <h1 class="introduction-head" style="margin-top: -25px;">CODE OF ETHICS</h1>
+                <p><b>All members of the GFG agree to :</b></p>
+                <p>
+                <ul style="line-height: 1.9;">
+                    <li>Promote the Association concept, be willing to cooperate, develop, and use the Membership services as well as to promote the GFG logo on vehicles, stationery, etc;</li>
+                    <li>Commit to work with all the other GFG members;</li>
+                    <li>Develop GFG-related business only in their own geographic area.</li>
+                    <li>During the GFG meetings a member shall not solicit shipments in those areas where there is a regularly appointed member.</li>
+                    <li>Accept the targets /standards of the GFG determined by the BOD and approved by the assembly;</li>
+                    <li>Pay the fees/subscription and possible penalties within one month after the receipt of the invoice from the Association secretary; if a member owes conference fees or any other money to the GFG that is past due, they will not be allowed to attend the conference or sales meetings.</li>
+                    <li>Attend all meetings (for Full members). Attendance at the Fall meeting is mandatory for all members, unless modified by the Board of Directors;</li>
+                    <li>Stay at the hotel chosen by the BOD (if possible) where the meeting will be held, and remain in attendance for the entire meeting including all sales sessions;</li>
+                    <li>Provide and develop continual sales leads/programmes with partners;</li>
+                    <li>Deal with partners in a spirit of friendship, loyalty and trust;</li>
+                    <li>Reply to all sales leads within a 10- day period;</li>
+                    <li>Reply to all GFG communications within 48 hours, whether from the BOD, a committee, or another member.;</li>
+                    <li>Accept the penalties that the BOD may apply to members and agree that repetitive infractions by Aspirant,Observer or Full members, can be an obstruction to the confirmation/re-confirmation of Full membership.</li>
+                    <li>Attend both BOD meetings each year if elected to the BOD; the right to vote within the BOD is reserved to Full members.</li>
+                </ul>
+                </p>
+            </div>
+            <!-- Exclusivity Rights -->
+            <div class="col-md-9 hide-div li-doc2">
+                <h1 class="introduction-head" style="margin-top: -25px;">Exclusivity Rights</h1>
                 <p><b>All members of the GFG agree to :</b></p>
                 <p>
                 <ul style="line-height: 1.9;">
